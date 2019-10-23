@@ -121,7 +121,7 @@ class CameraView: UIViewController, CLLocationManagerDelegate, CameraManDelegate
     }
 
     view.backgroundColor = configuration.mainColor
-
+    
     view.addSubview(containerView)
     containerView.addSubview(blurView)
 

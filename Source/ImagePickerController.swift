@@ -13,7 +13,7 @@ import Photos
 open class ImagePickerController: UIViewController {
 
   let configuration: Configuration
-
+  
   struct GestureConstants {
     static let maximumHeight: CGFloat = 200
     static let minimumHeight: CGFloat = 125
@@ -161,6 +161,14 @@ open class ImagePickerController: UIViewController {
     UIApplication.shared.setStatusBarHidden(statusBarHidden, with: .fade)
   }
 
+  override open func viewSafeAreaInsetsDidChange() {
+    if #available(iOS 11.0, *) {
+      self.topView.frame.origin.x = self.view.safeAreaInsets.left
+      self.topView.frame.origin.y = self.view.safeAreaInsets.top
+      print("topView frame origin: \(self.topView.frame.origin)")
+    }
+  }
+  
   open func resetAssets() {
     self.stack.resetAssets([])
   }

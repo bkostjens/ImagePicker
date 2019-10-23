@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2969F8B5235F520C0088D1B2 /* UIDevice-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2969F8B4235F520C0088D1B2 /* UIDevice-Extension.swift */; };
 		39D134101CAC4B4E00EA2ECE /* AssetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D1340F1CAC4B4E00EA2ECE /* AssetManager.swift */; };
 		39E3C3311CAFD79200340DAD /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E3C3301CAFD79200340DAD /* LocationManager.swift */; };
 		D20FF6361CD23426000F3BFE /* CameraMan.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20FF6351CD23426000F3BFE /* CameraMan.swift */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2969F8B4235F520C0088D1B2 /* UIDevice-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice-Extension.swift"; sourceTree = "<group>"; };
 		39D1340F1CAC4B4E00EA2ECE /* AssetManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetManager.swift; sourceTree = "<group>"; };
 		39E3C3301CAFD79200340DAD /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		D20FF6351CD23426000F3BFE /* CameraMan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraMan.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				D5DC59B51C201CC4003BD79B /* ConstraintsSetup.swift */,
+				2969F8B4235F520C0088D1B2 /* UIDevice-Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -273,7 +276,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 1110;
 				ORGANIZATIONNAME = "Hyper Interaktiv AS";
 				TargetAttributes = {
 					D5DC598A1C201BE1003BD79B = {
@@ -291,6 +294,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = D5DC59811C201BE1003BD79B;
@@ -353,6 +357,7 @@
 				D5DC59CE1C201CC4003BD79B /* TopView.swift in Sources */,
 				D5DC59C41C201CC4003BD79B /* ImageStack.swift in Sources */,
 				39E3C3311CAFD79200340DAD /* LocationManager.swift in Sources */,
+				2969F8B5235F520C0088D1B2 /* UIDevice-Extension.swift in Sources */,
 				D5DC59CB1C201CC4003BD79B /* ImageGalleryViewDataSource.swift in Sources */,
 				D25A8C2C1D47681E0008D2F7 /* ImageGalleryLayout.swift in Sources */,
 				D5DC59CA1C201CC4003BD79B /* ImageGalleryViewCell.swift in Sources */,
@@ -393,6 +398,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -401,12 +407,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -450,6 +458,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -458,12 +467,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

@@ -9,11 +9,11 @@ extension BottomContainerView {
     for attribute: NSLayoutAttribute in [.centerX, .centerY] {
       addConstraint(NSLayoutConstraint(item: pickerButton, attribute: attribute,
         relatedBy: .equal, toItem: self, attribute: attribute,
-        multiplier: 1, constant: 0))
+        multiplier: 1, constant: attribute == .centerY && UIDevice.hasNotch ? -10 : 0))
 
       addConstraint(NSLayoutConstraint(item: borderPickerButton, attribute: attribute,
         relatedBy: .equal, toItem: self, attribute: attribute,
-        multiplier: 1, constant: 0))
+        multiplier: 1, constant: attribute == .centerY && UIDevice.hasNotch ? -10 : 0))
     }
 
     for attribute: NSLayoutAttribute in [.width, .left, .top] {
@@ -38,7 +38,7 @@ extension BottomContainerView {
 
     addConstraint(NSLayoutConstraint(item: doneButton, attribute: .centerY,
       relatedBy: .equal, toItem: self, attribute: .centerY,
-      multiplier: 1, constant: 0))
+      multiplier: 1, constant: UIDevice.hasNotch ? -10 : 0))
 
     addConstraint(NSLayoutConstraint(item: stackView, attribute: .centerY,
       relatedBy: .equal, toItem: self, attribute: .centerY,
@@ -67,7 +67,7 @@ extension TopView {
   func setupConstraints() {
     addConstraint(NSLayoutConstraint(item: flashButton, attribute: .left,
       relatedBy: .equal, toItem: self, attribute: .left,
-      multiplier: 1, constant: Dimensions.leftOffset))
+      multiplier: 1, constant: UIDevice.hasNotch ? Dimensions.leftOffset + 15 : Dimensions.leftOffset))
 
     addConstraint(NSLayoutConstraint(item: flashButton, attribute: .centerY,
       relatedBy: .equal, toItem: self, attribute: .centerY,
@@ -80,7 +80,7 @@ extension TopView {
     if configuration.canRotateCamera {
       addConstraint(NSLayoutConstraint(item: rotateCamera, attribute: .right,
         relatedBy: .equal, toItem: self, attribute: .right,
-        multiplier: 1, constant: Dimensions.rightOffset))
+        multiplier: 1, constant: UIDevice.hasNotch ? Dimensions.rightOffset - 25 : Dimensions.rightOffset))
 
       addConstraint(NSLayoutConstraint(item: rotateCamera, attribute: .centerY,
         relatedBy: .equal, toItem: self, attribute: .centerY,
@@ -125,11 +125,11 @@ extension ImagePickerController {
 
     view.addConstraint(NSLayoutConstraint(item: bottomContainer, attribute: .height,
       relatedBy: .equal, toItem: nil, attribute: .notAnAttribute,
-      multiplier: 1, constant: BottomContainerView.Dimensions.height))
+      multiplier: 1, constant: UIDevice.hasNotch ? BottomContainerView.Dimensions.height + 30 : BottomContainerView.Dimensions.height))
 
     view.addConstraint(NSLayoutConstraint(item: topView, attribute: .height,
       relatedBy: .equal, toItem: nil, attribute: .notAnAttribute,
-      multiplier: 1, constant: TopView.Dimensions.height))
+      multiplier: 1, constant: UIDevice.hasNotch ? TopView.Dimensions.height + 10 : TopView.Dimensions.height))
 
     view.addConstraint(NSLayoutConstraint(item: cameraController.view, attribute: .height,
       relatedBy: .equal, toItem: view, attribute: .height,
