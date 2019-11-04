@@ -165,7 +165,7 @@ class CameraMan {
             }
             return
         }
-
+      
         self.savePhoto(image, location: location, completion: completion)
       }
     }
@@ -175,7 +175,7 @@ class CameraMan {
     guard let connection = stillImageOutput?.connection(with: AVMediaType.video) else { return }
     
     //connection.videoOrientation = AVCaptureVideoOrientation(rawValue: UIDevice.current.orientation.rawValue)!
-    connection.videoOrientation = AVCaptureVideoOrientation.landscapeRight
+    connection.videoOrientation = Helper.videoOrientation()
     
     queue.async {
       self.stillImageOutput?.captureStillImageAsynchronously(from: connection) { buffer, error in
@@ -201,6 +201,7 @@ class CameraMan {
   }
   
   func savePhoto(_ image: UIImage, location: CLLocation?, completion: (() -> Void)? = nil) {
+    
     PHPhotoLibrary.shared().performChanges({
       let request = PHAssetChangeRequest.creationRequestForAsset(from: image)
       request.creationDate = Date()
