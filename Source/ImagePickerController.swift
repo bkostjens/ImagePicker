@@ -138,7 +138,7 @@ open class ImagePickerController: UIViewController {
 
     statusBarHidden = UIApplication.shared.isStatusBarHidden
 
-    self.handleRotation(nil)
+    //self.handleRotation(nil)
   }
 
   open override func viewDidAppear(_ animated: Bool) {
