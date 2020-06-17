@@ -397,7 +397,7 @@ extension ImagePickerController: BottomContainerViewDelegate {
     } else {
         images = AssetManager.resolveAssets(stack.assets)
     }
-
+    print("\(#function): images: \(images)")
     delegate?.wrapperDidPress(self, images: images)
   }
 }

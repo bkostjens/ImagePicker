@@ -51,18 +51,20 @@ open class AssetManager {
     }
   }
 
-  open static func resolveAssets(_ assets: [PHAsset], size: CGSize = CGSize(width: 720, height: 1280)) -> [UIImage] {
+  public static func resolveAssets(_ assets: [PHAsset], size: CGSize = CGSize(width: 720, height: 1280)) -> [UIImage] {
     let imageManager = PHImageManager.default()
     let requestOptions = PHImageRequestOptions()
     requestOptions.isSynchronous = true
-
+    requestOptions.deliveryMode = .highQualityFormat
+    requestOptions.isNetworkAccessAllowed = true
+    
     var images = [UIImage]()
     for asset in assets {
-      imageManager.requestImage(for: asset, targetSize: size, contentMode: .aspectFill, options: requestOptions) { image, _ in
+      imageManager.requestImage(for: asset, targetSize: size, contentMode: .aspectFill, options: requestOptions, resultHandler:  { (image, info) in
         if let image = image {
           images.append(image)
         }
-      }
+      })
     }
     return images
   }
