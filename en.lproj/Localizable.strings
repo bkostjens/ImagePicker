@@ -1,0 +1,23 @@
+/* 
+  Localizable.strings
+  ImagePicker
+
+  Created by Barry Kostjens on 22/06/2020.
+  Copyright © 2020 Hyper Interaktiv AS. All rights reserved.
+*/
+
+"IP.OK" = "OK";
+
+"IP.Cancel" = "Cancel";
+
+"IP.Done" = "Done";
+
+"IP.No images available" = "No images available";
+
+"IP.Camera is not available" = "Camera is not available";
+
+"IP.Settings" = "Settings";
+
+"IP.Permission denied" = "Permission denied";
+
+"IP.Please, allow the application to access to your photo library." = "Please, allow the application to access to your photo library.";
